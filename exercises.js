@@ -64,8 +64,13 @@ return arr.length;
  * @param {Array}
  * @return {Number}
  */
-var countAll;
-
+var countAll = function(arr){
+  var sum = 0;
+  for(var i =0;i<arr.length;i++){
+    sum +=arr[i];
+  }
+  return sum;
+};
 /* #countStrings
  *
  * Takes in an array of strings and returns an array of string lengths.
