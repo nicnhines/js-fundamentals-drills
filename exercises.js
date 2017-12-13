@@ -205,7 +205,14 @@ var sumBelowTen=function(arr) {
  * @param {String}
  * @return {Number}
  */
-var moreThanTenLetters;
+var moreThanTenLetters= function(str){
+  var newStr=0;
+  for (var i = 0; i<str.length;i++){
+    if(str[i].length>= 10)
+     newStr+=1;
+  }
+  return newStr;
+};
 
 /* #multiplyAll
  *
