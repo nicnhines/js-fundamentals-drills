@@ -122,7 +122,14 @@ var convertToArray = function(obj){
  * @param {Object}
  * @return {Number}
  */
-var objectSize;
+var objectSize= function(obj){
+  var size = 0, key;
+  for (key in obj) {
+    if (obj.hasOwnProperty(key)) size++;
+  }
+  return size;
+};
+
 
 /* #createZeroFilledArray
  *
@@ -131,7 +138,13 @@ var objectSize;
  * @param {Number}
  * @return {Zero}
  */
-var createZeroFilledArray;
+var createZeroFilledArray=function(n){
+  var arr=[];
+  for(var i= 0; i<n;i++){
+    arr.push(0);
+  }
+  return arr;
+};
 
 /* #poppedArray
  *
@@ -140,7 +153,10 @@ var createZeroFilledArray;
  * @param {Array}
  * @return {Array}
  */
-var poppedArray;
+var poppedArray= function(arr){
+  arr.pop();
+  return arr;
+};
 
 /* #splitString
  *
@@ -149,7 +165,9 @@ var poppedArray;
  * @param {String}
  * @return {Array}
  */
-var splitString;
+var splitString= function(str){
+  return str.split("");
+};
 
 /* #lengthOfLast
  *
@@ -158,7 +176,10 @@ var splitString;
  * @param {String}
  * @return {Number}
  */
-var lengthOfLast;
+var lengthOfLast=function(arr){
+  var i = arr.length -1;
+  return arr[i].length;
+};
 
 /* #sumBelowTen
  *
@@ -167,7 +188,15 @@ var lengthOfLast;
  * @param {Array}
  * @return {Number}
  */
-var sumBelowTen;
+var sumBelowTen=function(arr) {
+  var sum = 0;
+  for(var i =0; i<arr.length;i++) {
+    if(arr[i]<10){
+      sum += arr[i];
+    }
+  }
+  return sum;
+};
 
 /* #moreThanTenLetters
  *
