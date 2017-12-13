@@ -52,7 +52,10 @@ return str.length;
  * @param {String}
  * @return {Number}
  */
-var arrayLength;
+var arrayLength = function(arr){
+return arr.length;
+
+};
 
 /* #countAll
  *
