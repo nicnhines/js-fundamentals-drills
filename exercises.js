@@ -236,7 +236,10 @@ var multiplyAll= function(arr){
  * @param {Object}
  * @return {Array}
  */
-var getKeys;
+var getKeys= function(obj){
+  var keys=Object.keys(obj);
+  return keys;
+};
 
 /* #sumAllPositive
  *
@@ -487,7 +490,6 @@ module.exports = {
   tupleToObjectReverse: tupleToObjectReverse,
   strToKeys: strToKeys,
   getValues: getValues,
-  getKeys: getKeys,
   objectToArray: objectToArray,
   arrayToObject: arrayToObject,
   arraysToObject: arraysToObject,
