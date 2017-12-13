@@ -293,7 +293,10 @@ var countObjects=function(obj){
  * @param {Object}
  * @return {Array}
  */
-var getObjectKeys;
+var getObjectKeys=function(obj){
+  var keys=Object.keys(obj);
+  return keys;
+};
 
 /* #getObjectValues
  *
@@ -302,7 +305,9 @@ var getObjectKeys;
  * @param {Object}
  * @return {Array}
  */
-var getObjectValues;
+var getObjectValues=function(obj){
+  return Object.values(obj);
+};
 
 /* #makeObject
  *
@@ -312,7 +317,11 @@ var getObjectValues;
  * @param {String}
  * @return {Object}
  */
-var makeObject;
+var makeObject= function(key,value){
+  var obj={};
+  obj[key] = value;
+  return obj;
+};
 
 /* #makeObjectReverse
  *
