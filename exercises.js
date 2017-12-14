@@ -526,7 +526,14 @@ var arrayToObjectNums=function(arr){
  * @param {String}
  * @return {Object}
  */
-var stringToKeys;
+var stringToKeys=function(str){
+  var obj={};
+  splStr=str.split('');
+  for(var i = 0;i<str.length;i++){
+    obj[splStr[i]] = true;
+  }
+  return obj;
+};
 
 /* #charCountMap
  *
