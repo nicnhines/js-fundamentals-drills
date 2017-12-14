@@ -237,8 +237,8 @@ var multiplyAll= function(arr){
  * @return {Array}
  */
 var getKeys= function(obj){
-  var keys=Object.keys(obj);
-  return keys;
+  return Object.keys(obj);
+  
 };
 
 /* #sumAllPositive
@@ -294,8 +294,7 @@ var countObjects=function(obj){
  * @return {Array}
  */
 var getObjectKeys=function(obj){
-  var keys=Object.keys(obj);
-  return keys;
+  return Object.keys(obj);
 };
 
 /* #getObjectValues
@@ -385,7 +384,9 @@ var strToKeys= function(arr){
  * @param {Object}
  * @return {Array}
  */
-var getValues;
+var getValues=function(obj){
+  return Object.values(obj);
+};
 
 /* #getKeys
  *
@@ -404,7 +405,12 @@ var getKeys;
  * @param {Object}
  * @return {Array}
  */
-var objectToArray;
+var objectToArray=function(obj){
+  var arr=[];
+  for(var key in obj)
+    arr.push([key, obj[key]]);
+  return arr;
+};
 
 /* #arrayToObject
  *
