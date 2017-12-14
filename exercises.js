@@ -543,7 +543,14 @@ var stringToKeys=function(str){
  * @param {Array}
  * @return {Object}
  */
-var charCountMap;
+var charCountMap=function(arr){
+  var obj={};
+  for(var i=0;i<arr.length;i++){
+    obj[arr[i]] = arr[i].length;
+  }
+  return obj;
+
+};
 
 /* #frequencyMap
  *
@@ -552,7 +559,13 @@ var charCountMap;
  * @param {String}
  * @return {Bool}
  */
-var frequencyMap;
+var frequencyMap=function(str){
+  var obj={};
+  for(var i=0;i<str.length;i++){
+    obj[str[i]] = (obj[str[i]] || 0) +1;
+  }
+  return obj;
+};
 
 /* #tupleConvertToObject
  *
